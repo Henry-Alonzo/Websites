@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Steves Drumstiks</title>
+  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <!-- Drumstick Cursor-->
+  <div class="info">
+
+    <!--Hero-->
+
+    <div class="container">
+      <main>
+        <img src="/dist/assets/steve.png" alt="Steves Drumstiks Image" class="drumsticks-image">
+        <div class="social-icons">
+          <a href="#" class="instagram-icon">
+            <img src="/dist/assets/ig.png" alt="Instagram"></a>
+          <a href="#" class="youtube-icon">
+            <img src="/dist/assets/yt.png" alt="YouTube"></a>
+        </div>
+        <h1>Dear BBQ Enthusiast,<br></h1>
+        <p>🍗 By <i>subscribing</i> , you'll gain access to:<br>
+          🍗 Pop-ups, including locations and dates.<br>
+          🍗 Priority invites to secret BBQ gatherings.<br>
+          🍗 Exclusive discounts and offers.<br>
+          🍗 Catering Services</p>
+        <form id="signup-form">
+          <input type="email" name="email" placeholder="E-mail">
+          <button type="submit">Sign Up</button>
+        </form>
+
+        <!--Matchstick Desktop-->
+
+        <div class="containerfire">
+          <div class="flame">
+            <svg width="150px" height="200px" viewBox="0 0 150 300">
+              <radialGradient id="flame-gradient" cy="90%" cx="50%" r="0.8" x2="1" y2="1">
+                <stop offset="0%" stop-color="blanchedalmond" />
+                <stop offset="20%" stop-color="yellow" />
+                <stop offset="100%" stop-color="red" />
+              </radialGradient>
+              <path id="flame"
+                d="M 74.99 0 C -0.01 85.41 -0.01 214.59 74.99 300 C 149.98 214.59 149.98 85.41 74.99 0 Z" />
+            </svg>
+          </div>
+          <div class="matchhead"></div>
+          <div class="matchstick"></div>
+        </div>
+      </main>
+
+      <!--Event Calendar Section-->
+
+      <div id="content0">
+        <div>
+          <ul>
+            <h2>Event Calendar</h2><br>
+            <li>
+              <div class="date">
+                <h3>Jun<br><span>13</span></h3>
+              </div>
+              <a href="#">
+                <p>Long Beach, CA<br>1234 Fake Street</p>
+              </a>
+            </li>
+            <li>
+              <div class="date">
+                <h3>Jun<br><span>19</span></h3>
+              </div>
+              <a href="#">
+                <p>Long Beach, CA<br>1234 Fake Street</p>
+              </a>
+            </li>
+            <li>
+              <div class="date">
+                <h3>Jun<br><span>21</span></h3>
+              </div>
+              <a href="#">
+                <p>Long Beach, CA<br>1234 Fake Street</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        </section>
+      </div>
+
+      <!--Combo Cards 1-3 Section-->
+
+      <div id="content1">
+        <h2>COMBO 1<br>20.00$</h2>
+        <h3>2 spicy drumsticks<br>
+          mac & Cheese<br>
+          potato salad<br>
+          lemonade</h3>
+      </div>
+
+      <div id="content2">
+        <h2>COMBO 2<br>20.00$</h2>
+        <h3>2 Regular drumsticks<br>
+          mac & Cheese<br>
+          potatoe salad<br>
+          lemonade</h3>
+      </div>
+
+      <div id="content3">
+        <h2>CLASSIC<br>SIDES</h2>
+        <h3>DRUMSTICK &#8226; 3$<br>
+          MAC & CHEESE &#8226; 6$<br>
+          POTATOE SALAD &#8226; 6$<br>
+          LEMONADE &#8226; 6$</h3>
+      </div>
+
+      <!--Contact Section-->
+
+      <footer>
+        <section class="contact" id="contact">
+          <h2 class="contact-head">Contact:<br>Catering Services</h2><br>
+
+          <form action="https://formsubmit.co/" method="POST">
+            <div class="input-box">
+              <div class="input-field">
+                <input type="text" name="full_name" placeholder="Full Name" required>
+              </div>
+
+              <div class="input-field">
+                <input type="email" name="email" placeholder="Email Address" required>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <div class="input-field">
+                <input type="tel" name="mobile_number" placeholder="Mobile Number" required>
+              </div>
+
+              <div class="input-field">
+                <input type="text" name="email_subject" placeholder="Email Subject" required>
+              </div>
+
+              <div class="textarea-field">
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+              </div>
+
+              <div class="btn-box">
+                <button type="submit" class="btn">Submit</button>
+              </div>
+          </form>
+        </section>
+      </footer>
+
+      <!--Scripts-->
+
+      <script src="script.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+      <script src="./script.js"></script>
+</body>
+
+</html>

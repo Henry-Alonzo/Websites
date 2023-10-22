@@ -1,0 +1,725 @@
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap');
+
+:root {
+  --main-radius: 16px;
+  --main-padding: 5px;
+  --main-background: #ffe63d;
+  --main-border: 8px solid red;
+  --main-color: #ffe63d;
+}
+
+body {
+  font-family: "Inclusive", sans-serif;
+  background: black;
+}
+
+/* Cursor Drumstick */
+
+.info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Grid Containers */
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2.5fr 1.5fr 1fr;
+  grid-template-areas:
+    "main main content0"
+    "content1 content2 content3"
+    "footer footer footer";
+  font-weight: 800;
+  grid-gap: 1.3rem;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: black;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+main {
+  grid-area: main;
+  padding-top: var(--main-padding);
+  border-radius: var(--main-radius);
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  display: inline-block;
+  font-size: 18px;
+  font-family: 'Inclusive Sans';
+  text-align: left;
+  padding: 0 20px;
+  margin: 10px auto;
+  max-width: 500px;
+  color: var(--main-color);
+}
+
+h1 {
+  font-family: 'Dela Gothic One';
+  font-size: 26px;
+  color: var(--main-color);
+  letter-spacing: 1px;
+  margin-top: 25px;
+  line-height: 1.8rem;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: 'Inclusive Sans';
+  line-height: 1.8rem;
+  margin: 25px;
+}
+
+/* Logo */
+
+.drumsticks-image {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 600px;
+}
+
+/* Socials */
+
+.social-icons {
+  text-align: center;
+}
+
+.instagram-icon {
+  display: inline-block;
+}
+
+.instagram-icon img {
+  width: 50px;
+  height: auto;
+  border: 5px solid gold;
+  border-radius: 22px;
+  margin-right: 5px;
+}
+
+.youtube-icon {
+  display: inline-block;
+}
+
+.youtube-icon img {
+  width: 50px;
+  height: auto;
+  border: 5px solid gold;
+  border-radius: 22px;
+  margin-left: 5px;
+}
+
+/* Signup Email Buttons */
+
+#signup-form input::placeholder {
+  color: black;
+}
+
+#signup-form {
+  margin-top: 20px;
+}
+
+#signup-form input,
+#signup-form button {
+  display: block;
+  border-radius: 14px;
+  margin: 10px auto;
+  padding: 8px;
+  width: 250px;
+  box-sizing: border-box;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+#signup-form input[type="email"] {
+  background: var(--main-background);
+  color: black;
+  border: 4px solid red;
+}
+
+#signup-form input[type="email"]:focus {
+  outline-color: black;
+}
+
+#signup-form button {
+  background: var(--main-background);
+  cursor: pointer;
+  border: 4px solid red;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#signup-form button:hover {
+  background-color: red;
+  color: var(--main-color);
+}
+
+/* Matchstick Desktop */
+
+.red {
+  width: 80px;
+  height: 80px;
+  background: orangered;
+  box-shadow: 0px 0px 5px 5px orangered;
+}
+
+.orange {
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  background: orange;
+
+}
+
+.gold {
+  left: 18px;
+  width: 45px;
+  height: 45px;
+  background: gold;
+
+}
+
+.white {
+  left: 22px;
+  width: 35px;
+  height: 35px;
+  background: lightgold;
+}
+
+.base {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.flame-wrapper {
+  position: absolute;
+  animation: flicker 3ms ease-in infinite;
+  top: 80%;
+  left: 50%;
+}
+
+.flame {
+  bottom: 0;
+  position: absolute;
+  border-radius: 50% 0% 50% 50%;
+  transform: rotate(-45deg);
+}
+
+@keyframes flicker {
+  0% {
+    transform: rotate(-1deg);
+  }
+
+  20% {
+    transform: rotate(2deg) scaleY(1.05);
+  }
+
+  40% {
+    transform: rotate(-1deg);
+  }
+
+  60% {
+    transform: rotate(1deg);
+  }
+
+  80% {
+    transform: rotate(-1deg) scaleY(0.90);
+  }
+
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+/* Calendar Text*/
+
+ul {
+  padding: 20px;
+}
+
+ul li {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+ul li a {
+  color: #262626;
+  text-decoration: none;
+  padding-left: 60px;
+}
+
+ul li:hover {
+  background: yellow;
+  border-radius: 8px;
+}
+
+.date {
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  text-align: center;
+}
+
+/* Calendar */
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #ffe63d 50%, gold 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+.date:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-top: 22px solid #e2574c;
+  border-bottom: 50px solid #ddd;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.date h3 {
+  position: relative;
+  z-index: 2;
+  margin-top: -6px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 36px;
+}
+
+.date h3 span {
+  font-size: 36px;
+  color: #324d5b;
+}
+
+/* Grid Containers, Calendar and Combo cards */
+
+#content0,
+#content1,
+#content2,
+#content3 {
+  color: black;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Dela Gothic One';
+}
+
+#content0 p,
+#content1 p,
+#content2 p,
+#content3 p {
+  color: black;
+  padding: 10px;
+  /* Padding for spacing */
+  text-align: center;
+  font-size: 19px;
+  font-family: 'Inclusive Sans';
+  line-height: 1.9rem;
+}
+
+#content0 {
+  border: var(--main-border);
+  background: var(--main-background);
+  grid-area: content0;
+  padding-top: var(--main-padding);
+  border-radius: var(--main-radius);
+}
+
+#content0 {
+  text-shadow: none;
+background: -webkit-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -webkit-linear-gradient(top, gold, gold);
+background: -moz-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -moz-linear-gradient(top, gold, gold);
+background: -ms-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -ms-linear-gradient(top, gold, gold);
+background: -o-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -o-linear-gradient(top, gold, gold);
+background: linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), linear-gradient(top, gold, gold);
+-pie-background: linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), linear-gradient(top, gold, gold);
+background-repeat: repeat;
+-webkit-background-size: 40px 40px, 100% 100%;
+-moz-background-size: 40px 40px, 100% 100%;
+-ms-background-size: 40px 40px, 100% 100%;
+-o-background-size: 40px 40px, 100% 100%;
+background-size: 40px 40px, 100% 100%;
+-webkit-animation: progress-bar-stripes 2s linear infinite;
+-moz-animation: progress-bar-stripes 2s linear infinite;
+-ms-animation: progress-bar-stripes 2s linear infinite;
+-o-animation: progress-bar-stripes 2s linear infinite;
+animation: progress-bar-stripes 2s linear infinite;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  from { background-position: 0 0; }
+  to { background-position: 40px 0; }
+  }
+  
+  @-moz-keyframes progress-bar-stripes {
+  from { background-position: 0 0; }
+  to { background-position: 40px 0; }
+  }
+  
+  @keyframes progress-bar-stripes {
+  from { background-position: 0 0; }
+  to { background-position: 40px 0; }
+  }
+
+#content1 {  
+  border: var(--main-border);
+  background: var(--main-background);
+  grid-area: content1;
+  padding-top: var(--main-padding);
+  border-radius: var(--main-radius);
+}
+
+#content1 {
+  text-shadow: none;
+background: -webkit-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -webkit-linear-gradient(top, gold, gold);
+background: -moz-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -moz-linear-gradient(top, gold, gold);
+background: -ms-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -ms-linear-gradient(top, gold, gold);
+background: -o-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -o-linear-gradient(top, gold, gold);
+background: linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), linear-gradient(top, gold, gold);
+-pie-background: linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), linear-gradient(top, gold, gold);
+background-repeat: repeat;
+-webkit-background-size: 40px 40px, 100% 100%;
+-moz-background-size: 40px 40px, 100% 100%;
+-ms-background-size: 40px 40px, 100% 100%;
+-o-background-size: 40px 40px, 100% 100%;
+background-size: 40px 40px, 100% 100%;
+-webkit-animation: progress-bar-stripes 2s linear infinite;
+-moz-animation: progress-bar-stripes 2s linear infinite;
+-ms-animation: progress-bar-stripes 2s linear infinite;
+-o-animation: progress-bar-stripes 2s linear infinite;
+animation: progress-bar-stripes 2s linear infinite;
+}
+
+#content2 {
+  border: var(--main-border);
+  background: var(--main-background);
+  grid-area: content2;
+  padding-top: var(--main-padding);
+  border-radius: var(--main-radius);
+}
+
+#content2 {
+  text-shadow: none;
+background: -webkit-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -webkit-linear-gradient(top, gold, gold);
+background: -moz-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -moz-linear-gradient(top, gold, gold);
+background: -ms-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -ms-linear-gradient(top, gold, gold);
+background: -o-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -o-linear-gradient(top, gold, gold);
+background: linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), linear-gradient(top, gold, gold);
+-pie-background: linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), linear-gradient(top, gold, gold);
+background-repeat: repeat;
+-webkit-background-size: 40px 40px, 100% 100%;
+-moz-background-size: 40px 40px, 100% 100%;
+-ms-background-size: 40px 40px, 100% 100%;
+-o-background-size: 40px 40px, 100% 100%;
+background-size: 40px 40px, 100% 100%;
+-webkit-animation: progress-bar-stripes 2s linear infinite;
+-moz-animation: progress-bar-stripes 2s linear infinite;
+-ms-animation: progress-bar-stripes 2s linear infinite;
+-o-animation: progress-bar-stripes 2s linear infinite;
+animation: progress-bar-stripes 2s linear infinite;
+}
+
+#content3 {
+  border: var(--main-border);
+  background: var(--main-background);
+  grid-area: content3;
+  padding-top: var(--main-padding);
+  border-radius: var(--main-radius);
+}
+
+#content3 {
+  text-shadow: none;
+background: -webkit-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -webkit-linear-gradient(top, gold, gold);
+background: -moz-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -moz-linear-gradient(top, gold, gold);
+background: -ms-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -ms-linear-gradient(top, gold, gold);
+background: -o-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -o-linear-gradient(top, gold, gold);
+background: linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), linear-gradient(top, gold, gold);
+-pie-background: linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), linear-gradient(top, gold, gold);
+background-repeat: repeat;
+-webkit-background-size: 40px 40px, 100% 100%;
+-moz-background-size: 40px 40px, 100% 100%;
+-ms-background-size: 40px 40px, 100% 100%;
+-o-background-size: 40px 40px, 100% 100%;
+background-size: 40px 40px, 100% 100%;
+-webkit-animation: progress-bar-stripes 2s linear infinite;
+-moz-animation: progress-bar-stripes 2s linear infinite;
+-ms-animation: progress-bar-stripes 2s linear infinite;
+-o-animation: progress-bar-stripes 2s linear infinite;
+animation: progress-bar-stripes 2s linear infinite;
+}
+
+footer {
+  border: var(--main-border);
+  background: var(--main-background);
+  grid-area: footer;
+  padding-top: var(--main-padding);
+  border-radius: var(--main-radius);
+}
+
+footer {
+  text-shadow: none;
+background: -webkit-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -webkit-linear-gradient(top, gold, gold);
+background: -moz-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -moz-linear-gradient(top, gold, gold);
+background: -ms-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -ms-linear-gradient(top, gold, gold);
+background: -o-linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), -o-linear-gradient(top, gold, gold);
+background: linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), linear-gradient(top, gold, gold);
+-pie-background: linear-gradient(-45deg, #ffe63d 25%, transparent 25%, transparent 50%, #ffe63d 50%, #ffe63d 75%, transparent 75%, transparent), linear-gradient(top, gold, gold);
+background-repeat: repeat;
+-webkit-background-size: 40px 40px, 100% 100%;
+-moz-background-size: 40px 40px, 100% 100%;
+-ms-background-size: 40px 40px, 100% 100%;
+-o-background-size: 40px 40px, 100% 100%;
+background-size: 40px 40px, 100% 100%;
+-webkit-animation: progress-bar-stripes 2s linear infinite;
+-moz-animation: progress-bar-stripes 2s linear infinite;
+-ms-animation: progress-bar-stripes 2s linear infinite;
+-o-animation: progress-bar-stripes 2s linear infinite;
+animation: progress-bar-stripes 2s linear infinite;
+}
+
+/* Contact Section */
+
+.contact-head {
+  font-family: 'Dela Gothic One';
+  font-size: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+#contact input[type="text"]::placeholder,
+#contact input[type="tel"]::placeholder,
+#contact input[type="email"]::placeholder {
+  color: var(--main-color);
+  font-family: 'Inclusive Sans';
+}
+
+#contact input[type="text"]:focus,
+#contact input[type="tel"]:focus,
+#contact input[type="email"]:focus {
+  outline-color: black;
+}
+
+#contact input[type="text"],
+#contact input[type="tel"],
+#contact input[type="email"] {
+  background-color: black;
+  border: 4px solid red;
+  border-radius: 14px;
+  padding: 8px;
+  width: 230px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+.input-field input[type="text"] {
+  color: gold;
+}
+
+.textarea-field textarea:focus {
+  outline-color: black;
+}
+
+.contact form .textarea-field {
+  margin: .8rem 0 2.7rem;
+}
+
+.textarea-field textarea {
+  background-color: black;
+  color: var(--main-color);
+  border: var(--main-border);
+  border-radius: var(--main-radius);
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Inclusive Sans';
+  width: 300px;
+}
+
+.textarea-field textarea::placeholder {
+  color: var(--main-color);
+}
+
+.btn-box {
+  margin-bottom: 25px;
+}
+
+.btn-box .btn {
+  background-color: black;
+  border: 4px solid red;
+  color: var(--main-color);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -100px;
+}
+
+.btn-box .btn:hover {
+  background-color: red;
+  color: var(--main-color);
+}
+
+@media only screen and (max-width: 1160px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.8fr;
+    grid-template-areas:
+      "main"
+      "content0"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "main"
+      "content0"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+
+  .container main {
+    font-size: 40px;
+  }
+
+  .drumsticks-image {
+    width: 360px;
+  }
+
+  #content0,
+  #content1,
+  #content2,
+  #content3,
+  footer {
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .containerfire,
+  #flame,
+  .flame,
+  .matchhead,
+  .matchstick {
+    display: none;
+    margin-top: 365px;
+  }
+}
+
+/* Matchstick Desktop */
+
+.containerfire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(70px) translateY(-277px) scale(0.7);
+  margin-bottom: -350px;
+  width: 0px;
+}
+
+#flame {
+  fill: url(#flame-gradient) #ff0000;
+  animation: burn 1.2s ease-in-out infinite;
+}
+
+.flame {
+  margin-bottom: 180px;
+  transform: rotate(0deg);
+  z-index: -1;
+}
+
+.matchhead {
+  background: linear-gradient(firebrick 10%, saddlebrown 25%, black 30%);
+
+  width: 30px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: -10px;
+}
+
+.matchstick {
+  background: linear-gradient(black 5%, saddlebrown 15%, burlywood 25%);
+  width: 20px;
+  height: 300px;
+  margin-top: -6px;
+
+}
+
+@keyframes burn {
+  0% {
+    transform: skewy(2deg);
+  }
+
+  24% {
+    transform: skewy(-2deg);
+  }
+
+  50% {
+    transform: skewy(3deg);
+  }
+
+  70% {
+    transform: skewy(5deg);
+  }
+
+  100% {
+    transform: skewy(2deg);
+  }
+}
