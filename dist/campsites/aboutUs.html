@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campsite Website</title>
+  <link rel="stylesheet" href="./aboutUs.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="wrapper2 active-element">
+        <header class="main-header">
+            <nav>
+                <div class="masthead active-element">
+                    <h2></h2>
+                    <div id="menu-toggle" class="menu-toggle active-element">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                </div>
+                <div class="main-nav-list active-element">
+                    <ul>
+                        <li><a href="/dist/index.html">Home</a></li>
+                        <li><a href="/dist/campsites/aboutUS.html">Campsites</a></li>
+                        <li><a href="https://stripe.com/?utm_campaign=AMER_US_en_Google_Search_Brand_Stripe_EXA-20839462206&utm_medium=cpc&utm_source=google&ad_content=683853401230&utm_term=stripe&utm_matchtype=e&utm_adposition=&utm_device=c&gad_source=1&gclid=Cj0KCQjwiuC2BhDSARIsALOVfBKyvaic3enf7VKQ8-XHa4QgvevRfmPuaTCtaqhOCwwPl9Zha5YHRr0aAtpwEALw_wcB" class="active-link">Bookings</a></li>
+                        <li><a href="/dist/regulations/aboutUs.html" class="active-link">Regulations</a></li>
+                        <li><a href="https://www.google.com/maps/dir/?api=1&destination=Joshua+Tree+National+Park">Location</a></li>
+                        <li><a href="/dist/aboutUs/aboutUs.html">About Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="container">
+        <div class="card" id="starry-card"> 
+          <h1>Camps</h1>
+          <a href="/dist/index.html">
+            <img src="assets/logo.png" alt="About" class="logo">
+        </a>
+         <!-- <img src="assets/logo.png" alt="About" class="logo"> -->
+        </div>
+        <div class="card"> 
+            <h1>Pictures :</h1>
+
+            <section>
+                <article id="article-container"></article>
+                <div>
+                  <button id="leftArrow" onclick=previousImg()>❮</button>
+                  <button id="rightArrow" onclick=nextImg()>❯</button>
+                </div>
+              </section>
+
+            <p><i>Follow us on our socials for updates.</i></p>
+            <ul class="wrapper">
+                <li class="instagram">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                    </a>
+                </li>
+                <li class="youtube">
+                    <a href="https://www.youtube.com" target="_blank">
+                        <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+                    </a>
+                </li>
+            </ul>
+         </div>
+        <a href="/dist/index.html" class="card">
+            <span class="pulse-text">Home</span> &nbsp; &#x21A0;
+        </a>        
+    </div>
+  <script  src="./aboutUs.js"></script>
+</html>

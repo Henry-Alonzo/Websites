@@ -1,0 +1,379 @@
+:root {
+    --color-black: #000000;
+    --color-gold: #ffe082;
+    --color-green: #4caf50;
+    --color-brown: #AC6226;
+}
+
+
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0; 
+    padding: 0; 
+    background-color: #ffe082;
+}
+
+.wrapper2{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 4;
+    background-color: ;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.masthead{
+    /* Both of these are needed to keep the #menu-toggle visible when nav list is active / open. */
+    position: relative;
+    z-index: 1000;
+    /********************************/
+    width: 100%;
+    display: flex-start;
+    left: 2.5rem;
+    pointer-events: auto;
+}
+
+.masthead h1{
+    transition-delay: 450ms;
+}
+
+.menu-toggle{
+    cursor: pointer;
+    width: 55px;
+}
+
+.menu-toggle div{
+    background-color: var(--color-green);
+    border-radius: 25px;
+    box-shadow: 0px 3px 13px rgba(0,0,0,.3);
+    height: 7px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(.13,.24,.35,1.64);
+}
+
+.menu-toggle .one,
+.menu-toggle .two{
+    margin-bottom: 7px;
+}
+
+/************* Style and animate the nav overlay ***********************/
+.main-nav-list::before,
+.main-nav-list::after{
+    background-color: var(--color-gold);
+    content:"";
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 0vw;
+    transition: all 100ms ease-in-out 300ms;
+}
+
+.main-nav-list::before{
+    left: 0;
+}
+.main-nav-list::after{
+    right: 0;
+}
+
+.main-nav-list ul{
+    pointer-events: auto;
+    list-style: none;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    z-index: 2000;
+}
+
+.main-nav-list a{
+    color: var(--color-brown);
+    display: block;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    margin-right: 2.8rem;
+    opacity: 0;
+    text-align: left;
+    text-transform: uppercase;
+    transition-delay: 130ms;
+    text-decoration: none;
+}
+
+.main-nav-list .mobile-hide{/** Hide the link when viewing site on mobile devices. **/
+    display: none;
+}
+
+/************* Style the nav elements when active. ***********************/
+.menu-toggle.active .one{
+    box-shadow: 0px 3px 13px var(--color-brown);
+    transform: translate(0, 14px) rotate(45deg);
+}
+
+.menu-toggle.active .two{
+    background-color: transparent;
+    box-shadow: none;
+    transform: translateX(-55px);
+}
+
+.menu-toggle.active .three{
+    box-shadow: 0px 3px 13px rgba(0,0,0,.4);
+    transform: translate(0,-14px) rotate(-45deg);
+}
+
+.main-nav-list.active::before,
+.main-nav-list.active::after{
+    width: 100%;
+/*     transition-duration: 1000ms; */
+}
+
+.main-nav-list.active ul{
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition-delay: 560ms;
+    transition-duration: 240ms;
+    transition-timing-function: cubic-bezier(.1, .2, .3, 1.4);
+}
+
+.main-nav-list.active a{
+    transition-delay: 600ms;
+    opacity: 1;
+}
+
+h1 {
+    position: relative;
+    font-size: 4rem;
+    top: 4rem;
+}
+
+.logo {
+    padding-top: 6px;
+    width: 180px;
+}
+
+.card a[href="/dist/index.html"] {
+    width: 180px;
+    height: 180px;
+}
+
+#starry-card {
+    position: relative;
+}
+
+#star-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.30fr 1fr .12fr; 
+    background-color: var(--color-gold);
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    z-index: 1;
+    height: 100%; 
+    box-sizing: border-box; 
+}
+
+.container .card:nth-child(1) {
+    padding-left: 2rem;
+    justify-content: space-between; 
+    background-color: var(--color-black);
+    color: var(--color-gold);
+    font-weight: bold;
+    font-size: 4rem;
+    border: 6px solid var(--color-green);
+}
+
+.container .card:nth-child(2) {
+    text-align: left;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; 
+    align-items: flex-start;
+    background-color: var(--color-gold);
+    color: var(--color-green);
+    border: 6px solid var(--color-gold);
+    padding: 2rem; 
+    z-index: 3;
+}
+
+.container .card:nth-child(2) h1 {
+    color: var(--color-brown);
+    font-size: 2.3rem;
+    margin-top: -75px; /* Move the heading up by 10px */
+    padding-bottom: 3rem;
+}
+
+.container .card:nth-child(2) p {
+    font-size: 1.4rem; 
+    text-align: left;
+    font-family: 'Lora', serif;
+    color: black;
+    line-height: 1.4; 
+    margin-bottom: 1rem; 
+}
+
+.container .card:nth-child(3) {
+    background-color: var(--color-green);
+    color: var(--color-gold);
+    font-style: italic;
+    border: 6px solid var(--color-gold);
+    transition: transform 0.3s ease-in-out; 
+    animation: scalePulse 2s infinite;
+    border-radius: 30px;
+    z-index: 3;
+}
+
+/*Social Icons*/
+.wrapper {
+    display: flex; /* Arrange the items in a row */
+    justify-content: space-between; /* Distribute the items with space between them */
+    gap: 10px; /* Optional: adjust the gap between items */
+    list-style: none; /* Removes the dots (bullet points) from the list */
+    padding: 0; 
+    margin: 0; 
+}
+
+.wrapper a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: white; 
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 30px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition effect */
+    width: 70px;
+}
+
+.instagram a {
+    background-color: #E4405F; /* Instagram button color */
+}
+
+.instagram a:hover {
+    background-color: #c13584; /* Darker shade on hover */
+}
+
+.youtube a {
+    background-color: #FF0000; /* YouTube button color */
+    opacity: 100%;
+}
+
+.youtube a:hover {
+    background-color: #cc0000; /* Darker shade on hover */
+}
+
+section {
+    position: relative;
+    width: 310px;
+    height: 310px;
+    margin: 0;
+  }
+  
+  .image {
+    width: 310px;
+    height: 310px;
+    animation: slide 0.5s linear;
+  }
+  
+  @keyframes slide {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+  
+  #leftArrow {
+    all: unset;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem;
+    color: var(--color-gold);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  #rightArrow {
+    all: unset;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0.5rem;
+    color: var(--color-gold);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  #leftArrow:hover,
+  #rightArrow:hover {
+    background: rgb(0, 0, 0, 0.2);
+  }
+
+/*Pulsing Home Button Text*/
+.pulse-text {
+    display: inline-block; 
+    animation: textPulse 1.5s infinite; 
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        transform: scale(1); 
+        opacity: 1; 
+    }
+    50% {
+        transform: scale(1.1); 
+        opacity: 0.8; 
+    }
+}
+
+@media only screen and (min-width: 370px) and (max-width: 480px) {
+    .logo {
+        width: 180px;
+        padding-right: 2rem;
+    } 
+}
+
+@media (min-width: 1024px) {
+    section {
+      width: 100%;
+      height: 320px; /* Increase height for larger screens */
+    }
+  
+    .image {
+      width: 100%;
+      height: 320px; /* Adjust to match the section height */ /* Ensures the image covers the section without distortion */
+    }
+  }
+  
+
+
+

@@ -1,0 +1,176 @@
+:root {
+    --color-black: #000000;
+    --color-gold: #ffe082;
+    --color-green: #4caf50;
+    --color-brown: #AC6226;
+    --color-divider-opacity: 0.8; 
+}
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0px;
+    transition: opacity 0.5s ease;
+    overflow: hidden;
+    background-color: var(--color-gold);
+}
+
+#content {
+    transition: opacity 0.1s ease;
+}
+
+#transition-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 100%;
+    height: 100%;
+    background: var(--color-green); 
+    z-index: 1000;
+    opacity: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: left 0.5s ease, opacity 0.5s ease; 
+}
+
+.fade-out {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+  }
+  
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+  }
+
+.logo {
+    width: 170px;
+    height: auto;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--color-green);
+    margin: 10px auto;
+    opacity: var(--color-divider-opacity);
+    width: 100px;
+}
+
+.subheading {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    opacity: var(--color-divider-opacity);
+}
+
+#starry-card {
+    overflow: hidden;
+    position: relative;
+}
+
+#star-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 6px;
+    background-color: var(--color-black);
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    padding-top: 20px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.container .card:nth-child(1) {
+    background-color: var(--color-black);
+    color: var(--color-gold);
+    font-weight: bold;
+    font-size: 4rem;
+    border: 6px solid var(--color-gold);
+}
+
+.container .card:nth-child(2),
+.container .card:nth-child(3) {
+    background-color: var(--color-green);
+    color: var(--color-gold);
+    font-style: italic;
+    border: 6px solid var(--color-gold);
+}
+
+.container .card:nth-child(4),
+.container .card:nth-child(5) {
+    background-color: var(--color-gold);
+    color: var(--color-brown);
+    font-style: italic;
+    border: 6px solid var(--color-green);
+}
+
+.container .card:nth-child(6) {
+    background-color: var(--color-black);
+    color: var(--color-gold);
+    font-weight: bold;
+    border: 6px solid var(--color-gold);
+}
+
+.container .card:nth-child(2):hover,
+.container .card:nth-child(3):hover,
+.container .card:nth-child(4):hover,
+.container .card:nth-child(5):hover,
+.container .card:nth-child(6):hover {
+    transform: rotate(5deg);  
+}
+
+@media only screen and (min-width: 370px) and (max-width: 480px) {
+    .logo {
+        width: 80%; 
+        max-width: 250px; 
+        margin-top: 20px; 
+    }
+    p {
+        margin-top: -2px; 
+        padding-left: 2px; 
+        padding-right: 2px; 
+    }
+    .container .card:nth-child(1) {
+        font-size: 2.5rem; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
